@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ROBOTZERO 零号 - 驱动空间智能的未来</title>
+    <meta name="description" content="第二代健康服务机器人即将面世。当空间智能遇上具身机器人，ROBOTZERO零号带你开启全域智护新纪元。">
+    <style>
+        /* ================= 全局基础变量与样式 ================= */
+        :root {
+            --bg-color: #05080A;
+            --brand-orange: #FF6B35;
+            --brand-orange-glow: rgba(255, 107, 53, 0.2);
+            --text-main: #FFFFFF;
+            --text-muted: #9CA3AF;
+            --card-bg: #11151A;
+            --border-color: #1F2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ================= 导航栏 (吸顶) ================= */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(5, 8, 10, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .logo .white { color: var(--text-main); }
+        .logo .orange { color: var(--brand-orange); }
+
+        /* ================= 滚动渐显动画 ================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= 页面通用 Section ================= */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        /* ================= 第一屏：人文哲学 ================= */
+        .quote-box {
+            text-align: center;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .quote-mark {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 120px;
+            font-family: Georgia, serif;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-size: 28px;
+            color: #D1D5DB;
+            font-style: italic;
+            letter-spacing: 2px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .quote-author {
+            font-size: 18px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* ================= 第二屏：科技悬念预告 ================= */
+        #teaser {
+            background: radial-gradient(circle at center, var(--card-bg) 0%, var(--bg-color) 70%);
+        }
+
+        .teaser-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .teaser-title span {
+            color: var(--brand-orange);
+            text-shadow: 0 0 20px var(--brand-orange-glow);
+        }
+
+        .teaser-subtitle {
+            font-size: 20px;
+            color: var(--brand-orange);
+            background: var(--brand-orange-glow);
+            padding: 10px 30px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        /* 解密矩阵 Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .grid-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            border-color: var(--brand-orange);
+        }
+
+        .grid-item h3 {
+            font-size: 22px;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .grid-item .locked {
+            font-size: 14px;
+            color: var(--brand-orange);
+            font-family: monospace;
+            letter-spacing: 2px;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .pain-points {
+            text-align: center;
+            font-size: 20px;
+            color: #D1D5DB;
+            line-height: 2;
+            letter-spacing: 1.5px;
+        }
+
+        /* ================= 第三屏：终极愿景与联系 ================= */
+        #vision {
+            border-top: 1px solid var(--border-color);
+        }
+
+        .vision-title {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+
+        .vision-desc {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #FFF;
+            border-radius: 12px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .cta-text {
+            font-size: 18px;
+            color: var(--brand-orange);
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .domain {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .email {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #4B5563;
+        }
+
+        /* ================= 移动端适配 ================= */
+        @media (max-width: 768px) {
+            .quote-text { font-size: 22px; }
+            .teaser-title { font-size: 32px; }
+            .grid-container { grid-template-columns: 1fr; }
+            .vision-title { font-size: 32px; }
+            section { padding: 80px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">
+            <span class="white">ROBOT</span><span class="orange">ZERO</span>
+        </div>
+    </nav>
+
+    <!-- 第一屏：哲学与使命 -->
+    <section id="hero">
+        <div class="quote-box reveal">
+            <div class="quote-mark">“</div>
+            <p class="quote-text">真正的科技，不该让长者感到局促，<br>而应退隐于空间之中，化作无声的守候。</p>
+            <p class="quote-author">— ROBOTZERO 零号软件</p>
+        </div>
+    </section>
+
+    <!-- 第二屏：科技悬念预热 -->
+    <section id="teaser">
+        <h1 class="teaser-title reveal">
+            当 空间智能<br>遇上 <span>具身机器人</span>
+        </h1>
+        <div class="teaser-subtitle reveal">一款划时代的革命性产品 · 即将面世</div>
+        
+        <div class="grid-container reveal">
+            <div class="grid-item">
+                <h3>隐形雷达感知网</h3>
+                <div class="locked">[ 核心模组解密中 ]</div>
+            </div>
+            <div class="grid-item">
+                <h3>医疗级睡眠体征监测</h3>
+                <div class="locked">[ 算法系统加载中 ]</div>
+            </div>
+            <div class="grid-item">
+                <h3>1.5米物理复核光环</h3>
+                <div class="locked">[ 空间大模型部署中 ]</div>
+            </div>
+            <div class="grid-item">
+                <h3>第二代健康服务机器人</h3>
+                <div class="locked">[ 具身形态待唤醒 ]</div>
+            </div>
+        </div>
+
+        <div class="pain-points reveal">
+            <p>别让父母的晚年，成为我们手机屏幕前盲目的焦虑。</p>
+            <p>无穿戴、无感化、无隐私侵犯的医疗级居家康养空间。</p>
+        </div>
+    </section>
+
+    <!-- 第三屏：终局愿景与联系方式 -->
+    <section id="vision">
+        <h2 class="vision-title reveal">家，是我们最后的堡垒。</h2>
+        <p class="vision-desc reveal">把空间安全交给 ROBOTZERO，把纯粹的陪伴留给父母。</p>
+
+        <div class="reveal">
+            <!-- 实际使用时，请将这里替换为真实的公众号二维码 <img> 标签 -->
+            <div class="qr-placeholder">微信公众号二维码</div>
+            <p class="cta-text">扫码关注公众号 · 见证未来降临</p>
+        </div>
+
+        <footer class="reveal">
+            <div class="domain">ROBOT0.COM</div>
+            <div class="email">VIP 专属联络专线：vip@robot0.com</div>
+            <div class="copyright">© 广州零号软件科技有限公司 · 驱动空间智能的未来</div>
+        </footer>
+    </section>
+
+    <!-- 滚动动画触发脚本 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        // 取消注释下方代码，可使元素只显示一次动画
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.15 // 元素露出 15% 时触发动画
+            });
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+            
+            // 确保第一屏在加载时直接显示
+            setTimeout(() => {
+                document.querySelector('.quote-box').classList.add('active');
+            }, 100);
+        });
+    </script>
+
+</body>
+</html>
