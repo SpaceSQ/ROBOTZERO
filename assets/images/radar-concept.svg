@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Three-ring radar schematic">
+  <defs>
+    <filter id="glow-cyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#06b6d4" flood-opacity="0.85"/>
+    </filter>
+    <filter id="glow-green" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#22c55e" flood-opacity="0.95"/>
+    </filter>
+    <filter id="glow-red" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ef4444" flood-opacity="1"/>
+    </filter>
+  </defs>
+  <rect width="800" height="560" fill="#05080A"/>
+  <g stroke="#06b6d4" stroke-opacity="0.16" stroke-width="1">
+    <path d="M40 40 H760 M40 120 H760 M40 200 H760 M40 280 H760 M40 360 H760 M40 440 H760 M40 520 H760"/>
+    <path d="M80 24 V536 M200 24 V536 M320 24 V536 M440 24 V536 M560 24 V536 M680 24 V536"/>
+  </g>
+  <g fill="none" stroke="#06b6d4" filter="url(#glow-cyan)">
+    <circle cx="400" cy="280" r="78" stroke-width="1.4" stroke-opacity="0.95"/>
+    <circle cx="400" cy="280" r="148" stroke-width="1.4" stroke-opacity="0.75"/>
+    <circle cx="400" cy="280" r="218" stroke-width="1.6" stroke-opacity="0.55"/>
+    <path d="M400 52 V508 M172 280 H628" stroke-opacity="0.35" stroke-width="1"/>
+  </g>
+  <g fill="#94a3b8" font-family="ui-monospace, monospace" font-size="13">
+    <text x="418" y="198">T1</text>
+    <text x="470" y="128">T2</text>
+    <text x="548" y="58">T3</text>
+  </g>
+  <g filter="url(#glow-red)">
+    <rect x="388" y="214" width="24" height="132" rx="3" fill="#ef4444"/>
+    <rect x="334" y="268" width="132" height="24" rx="3" fill="#ef4444"/>
+    <circle cx="400" cy="280" r="16" fill="#05080A" stroke="#fecaca" stroke-width="3"/>
+  </g>
+  <g filter="url(#glow-green)">
+    <circle cx="400" cy="214" r="7" fill="#22c55e"/>
+    <circle cx="512" cy="214" r="6" fill="#22c55e"/>
+    <circle cx="292" cy="352" r="6" fill="#22c55e"/>
+    <circle cx="548" cy="360" r="6" fill="#22c55e"/>
+    <circle cx="250" cy="250" r="5" fill="#22c55e"/>
+  </g>
+  <g filter="url(#glow-red)">
+    <circle cx="582" cy="168" r="9" fill="#ef4444">
+      <animate attributeName="r" values="7;12;7" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.45;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="582" cy="168" r="22" fill="none" stroke="#ef4444" stroke-width="1.5">
+      <animate attributeName="r" values="14;34" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

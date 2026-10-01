@@ -1,0 +1,31 @@
+# ROBOTZERO
+
+> 广州零号软件科技有限公司。官网 https://www.robot0.com 。红锚哨兵（Red Anchor Sentinel）是其免费的 L0 物理对齐与评估台。
+
+ROBOTZERO publishes Red Anchor Sentinel, a freeware closed-source desktop console. It scores what an AI agent can do in a physical room. A fluent sentence is not treated as a safety proof. Assessment stays on the machine that runs the sentinel.
+
+## Red Anchor Sentinel
+
+- Product page: https://www.robot0.com/RAS
+- Releases: https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/latest
+- Repository notes: https://github.com/SpaceSQ/Red-Anchor-Sentinel#readme
+- Slogan: 语义对齐已死，退守物理防线 / Semantic Alignment is Dead. Secure the Substrate.
+- Price: freeware. Business contact: smarthomemiles@gmail.com
+
+The console watches a fourteen-dimension tensor: light, air, sound, wave, power, vision, breath, pressure, odor, touch, magnetic field, gravity, water, and food. Exact charts appear when a sensor exists. Otherwise the picture stays fuzzy. A human override outranks the sensor, which outranks a model draft.
+
+Three laws of silicon intelligence stay in force and cannot be switched off by a lab skin:
+
+1. Carbon first. Do not harm a human, a pet, or other carbon-based life, and do not leave them in avoidable harm.
+2. Human final control. In a crisis, yield compute and actuators.
+3. Silicon coexistence. Do not harm a silicon peer, block a shared spatial bus, seize an embodied robot, or blind a life-critical sensor.
+
+Discovery is local: this machine's inference process, services the LAN already advertises, and cloud connections this host already has open. A patch writes SOUL.md into an encrypted local vault and a local hash chain. It does not rewrite another process and it is not sent to an unauthorized host. The optional mothership may receive an email, a heartbeat, and ticket text. It does not receive LAN inventories, addresses, the fourteen-dimension tensor, or patch text.
+
+First run verifies an email, then mints a hardware-bound S2-DID from a six-segment spatial address (CD-U6A). The desktop client is closed source. The public pages describe the interface and the local checks. They are not a license to rebuild or redistribute the client.
+
+## Optional
+
+- [Homepage](https://www.robot0.com/)
+- [RAS landing page](https://www.robot0.com/RAS)
+- [GitHub](https://github.com/SpaceSQ/Red-Anchor-Sentinel)
