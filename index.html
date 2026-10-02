@@ -37,43 +37,19 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 16px 0;
+            padding: 20px 0;
             background: rgba(5, 8, 10, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             z-index: 100;
             border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
+            text-align: center;
         }
 
         .logo {
             font-size: 28px;
             font-weight: 900;
             letter-spacing: 2px;
-        }
-
-        .nav-ras {
-            color: var(--brand-orange);
-            text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 0.04em;
-            border: 1px solid rgba(255, 107, 53, 0.45);
-            border-radius: 999px;
-            padding: 8px 14px;
-            white-space: nowrap;
-        }
-
-        .nav-ras:hover {
-            background: rgba(255, 107, 53, 0.12);
         }
 
         .logo .white { color: var(--text-main); }
@@ -293,8 +269,6 @@
             .grid-container { grid-template-columns: 1fr; }
             .vision-title { font-size: 32px; }
             section { padding: 80px 20px 40px; }
-            .nav-inner { flex-direction: column; align-items: flex-start; }
-            .nav-ras { font-size: 13px; padding: 6px 10px; white-space: normal; }
         }
     </style>
 </head>
@@ -302,11 +276,8 @@
 
     <!-- 导航栏 -->
     <nav>
-        <div class="nav-inner">
-            <div class="logo">
-                <span class="white">ROBOT</span><span class="orange">ZERO</span>
-            </div>
-            <a class="nav-ras" href="/RAS">红锚哨兵 (Red Anchor Sentinel) →</a>
+        <div class="logo">
+            <span class="white">ROBOT</span><span class="orange">ZERO</span>
         </div>
     </nav>
 

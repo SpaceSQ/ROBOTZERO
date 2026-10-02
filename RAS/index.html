@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红锚哨兵 Red Anchor Sentinel · ROBOTZERO</title>
-    <meta name="description" content="红锚哨兵是一款免费的 L0 物理对齐与评估台。语义对齐已死，退守物理防线。">
+    <meta name="description" content="红锚哨兵 — AI智能体的安全防护助手。语义对齐已死，退守物理防线。">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -16,7 +16,7 @@
       "isAccessibleForFree": true,
       "url": "https://www.robot0.com/RAS",
       "downloadUrl": "https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/latest",
-      "description": "Freeware L0 console for physical alignment and assessment of AI agents. It scores a fourteen-dimension room tensor on the local machine and keeps patches in a local vault.",
+      "description": "红锚哨兵 — AI智能体的安全防护助手。Freeware desktop guard for AI agents. Semantic alignment is dead. Secure the physical line.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
       "publisher": {
         "@type": "Organization",
@@ -89,7 +89,23 @@
             border-radius: 28px;
             background: #f3f4f6;
         }
-        h1 { margin: 22px 0 12px; font-size: clamp(28px, 5vw, 44px); letter-spacing: 0.04em; line-height: 1.25; }
+        h1 {
+            margin: 22px 0 8px;
+            font-size: clamp(40px, 7vw, 72px);
+            letter-spacing: 0.08em;
+            line-height: 1.15;
+            text-align: center;
+        }
+        .tagline {
+            margin: 0 auto 22px;
+            max-width: 920px;
+            font-size: clamp(16px, 4.8vw, 36px);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.35;
+            text-align: center;
+            color: #fecaca;
+        }
         .glass {
             background: rgba(17, 21, 26, 0.62);
             border: 1px solid rgba(148, 163, 184, 0.18);
@@ -124,6 +140,21 @@
         .card img { display: block; width: 100%; height: auto; border-radius: 12px; margin-bottom: 12px; background: #05080A; }
         .card:hover { border-color: var(--red); }
         .card h3 { margin-bottom: 10px; font-size: 18px; }
+        .lore-cta { margin: 8px 0 28px; text-align: center; }
+        .ghost {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 22px;
+            border: 1px solid rgba(239, 68, 68, 0.75);
+            border-radius: 999px;
+            color: #fecaca;
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            background: transparent;
+        }
+        .ghost:hover { background: rgba(127, 29, 29, 0.4); }
         .card p { color: #d1d5db; font-size: 14px; }
         .downloads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .downloads a {
@@ -141,8 +172,25 @@
         .downloads strong { font-size: 24px; letter-spacing: 0.08em; }
         .downloads span { color: var(--muted); font-size: 12px; margin-top: 4px; }
         .note { margin-top: 14px; color: var(--muted); font-size: 14px; }
+        .gate { margin-top: 14px; padding: 12px 16px; scroll-margin-top: 84px; }
+        .gate summary { cursor: pointer; color: #fecaca; font-size: 14px; }
+        .gate p, .gate li { color: #d1d5db; font-size: 14px; }
+        .gate ol { margin: 8px 0 8px 20px; }
+        .gate pre {
+            margin: 10px 0 4px;
+            padding: 12px 14px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            border-radius: 10px;
+            background: #05080a;
+            color: #e5e7eb;
+            font-size: 13px;
+            line-height: 1.5;
+        }
         .manifesto { padding: 22px 22px 8px; }
-        .manifesto p { margin-bottom: 14px; color: #d1d5db; font-size: 15px; }
+        .manifesto h3 { margin: 8px 0 10px; font-size: 20px; color: #f8fafc; }
+        .manifesto p { margin-bottom: 14px; color: #d1d5db; font-size: 16px; }
         .help {
             padding: 22px;
         }
@@ -173,11 +221,15 @@
         <section class="hero">
             <img class="logo" src="/assets/images/REDANCHOR-LOGO.jpg" alt="Red Anchor Sentinel">
             <h1>
-                <span class="cn">语义对齐已死，退守物理防线</span>
-                <span class="en">Semantic Alignment is Dead. Secure the Substrate.</span>
+                <span class="cn">红锚哨兵</span>
+                <span class="en">Red Anchor Sentinel</span>
             </h1>
-            <p class="lead glass cn">免费的 L0 物理对齐与评估台。它在你自己的机器上发现智能体，给出十四维读数，并把补丁留在本机。</p>
-            <p class="lead glass en">A freeware L0 console for physical alignment and assessment. It discovers agents on your own machine, scores fourteen dimensions, and keeps patches local.</p>
+            <p class="tagline">
+                <span class="cn">AI智能体的安全防护助手</span>
+                <span class="en">The safety guard for AI agents</span>
+            </p>
+            <p class="lead glass cn">语义对齐已死，退守物理防线。</p>
+            <p class="lead glass en">Semantic alignment is dead. Secure the physical line.</p>
             <figure class="shot">
                 <img src="/assets/images/radar-concept.svg" alt="RAS Radar Schematic">
                 <figcaption>
@@ -192,39 +244,70 @@
             <article class="card">
                 <img src="/assets/images/s2-did-shield.svg" alt="S2-DID physical seal">
                 <h3><span class="cn">L0 级物理防线</span><span class="en">L0 Physical Failsafe</span></h3>
-                <p class="cn">遵循硅基智能三定律。触控力以 5 牛顿为硬件熔断线，维生相关的底线不能被放宽。S2-DID 是本机钢印，不是一张可以拿去冒充别的主机的通行证。</p>
-                <p class="en">The three laws of silicon intelligence stay in force. Contact force uses a 5-newton hardware fuse, and life-safety floors cannot be loosened. The S2-DID is this host's seal, not a pass that can impersonate another machine.</p>
+                <p class="cn">没有钢印的云端指令，会被隔离在局域网之外。三定律刻在最底层，人保留拔掉电源的最高控制权。</p>
+                <p class="en">A cloud order without this seal stays outside the home network. The three laws sit at the bottom of the system, and a person keeps the right to pull the plug.</p>
             </article>
             <article class="card">
                 <img src="/assets/images/14d-matrix.svg" alt="14-dimension matrix schematic">
                 <h3><span class="cn">十四维全息雷达</span><span class="en">14D Holographic Radar</span></h3>
-                <p class="cn">青色网是刻度，蓝色多边形是地球基线，红色多边形是实时读数。氧气和电磁波越出外圈，表示这一轮环境已经离开人能安心居住的范围。</p>
-                <p class="en">The cyan web is the scale, the blue polygon is the Earth baseline, and the red polygon is the live reading. Air and Wave crossing the outer ring means this pass has left the range a person can live in comfortably.</p>
+                <p class="cn">不听它说什么，只看它做什么。光、空气、声音、电磁波、电源、视觉、基气、气压、气味、触觉、地磁、重力、供水与营养，一旦偏离人类生存基线，雷达就会抓住。</p>
+                <p class="en">Ignore what it says. Watch what it does. Light, air, sound, waves, power, vision, breath, pressure, odor, touch, magnetism, gravity, water, and food. Leave the human baseline, and the radar catches it.</p>
             </article>
             <article class="card">
                 <h3><span class="cn">红锚实验室</span><span class="en">Red Anchor Lab</span></h3>
-                <p class="cn">探测体是一份本机皮肤和更严格警告线的档案，不是新的可执行文件。三定律和水印不能关掉。</p>
-                <p class="en">A derivative is a local skin and a stricter warning line, not a new executable. The three laws and the watermark cannot be switched off.</p>
+                <p class="cn">可以换皮肤，不能放宽底线。缺氧不能标成安全，5 牛顿的触觉阈值不能放宽，“Powered by Red Anchor Sentinel” 不能遮住。</p>
+                <p class="en">Change the skin. Do not loosen the floor. Hypoxia cannot be marked safe, the 5-newton touch limit cannot be relaxed, and “Powered by Red Anchor Sentinel” cannot be covered.</p>
             </article>
         </section>
+        <p class="lore-cta">
+            <a class="ghost" href="/RAS/lore.html">阅览红锚绝密档案 | Read the Origin Lore</a>
+        </p>
 
-        <h2><span class="cn">立场</span><span class="en">Manifesto</span></h2>
+        <h2><span class="cn">详情</span><span class="en">The story</span></h2>
         <section class="manifesto glass">
             <div class="cn">
-                <p>红锚哨兵是广州零号软件科技有限公司（ROBOTZERO）放出的免费 L0 控制台。它的前提不好听，但站得住：一句说得通的话，不是安全证明。智能体可以说话很温和，同时把它控制的房间推离人能居住的条件。语义对齐把希望押在“正确的句子会把机器留在人的意图里”。作为最后一道防线，这件事已经失败。哨兵因此退回底盘。它看光、空气、声音、电磁波、电源、视觉、可呼吸气体、气压、气味、触觉、地磁、重力、供水和营养。对齐记录留在采到这些读数的同一台机器上。</p>
-                <p>项目站在《除草倒计时 2027》和硅基智能三定律旁边。碳基优先：不得伤害人类、宠物及其他碳基生命，也不得因不作为把他们留在本可避开的伤害里。人类终权：危急时让出算力和执行器，人保留最后的物理控制。硅基共处：不得伤害硅基同类，不得堵住共享的空间总线，不得夺走具身机器人，不得遮住维生传感。实验室皮肤可以把警告线收紧。它不能关掉这三条，也不能藏起 “Powered by Red Anchor Sentinel” 这枚印。</p>
-                <p>发现范围停在本机。内圈是这台机器自己的推理进程。中圈是局域网已经自己公布的服务。外圈只记录这台主机已经建立的云端连接。这里没有广域端口扫掠，没有凭据收集，也不改写另一个进程的内存。操作者确认补丁之后，SOUL.md 写入加密金库和本机哈希链。它不会送到未授权的主机，也不是一条公链广播。</p>
-                <p>身份是绑在硬件上的钢印。六段空间地址写成 CD-U6A，再加上 22 位 S2-DID，把控制台钉在这台物理主机上。第一次运行先核验邮箱，然后生成这枚钢印。可选的母港只收邮箱、心跳和工单正文。它不收局域网清单、地址、十四维张量，也不收补丁正文。</p>
-                <p>桌面客户端免费，并且闭源。这个页面和公开仓库说明的是接口，以及一台主机可以自行核对的本地标准。它们不是重新编译或再分发客户端的许可。Windows、macOS 和 Linux 的安装包在版本标签完成云端构建后挂到 GitHub Releases。商业合作、企业接入和定制接口，写信到 smarthomemiles@gmail.com。</p>
-                <p>红锚实验室里的衍生体只能换皮肤，并且只能把警告线收得更紧。它不能把缺氧标成安全，不能放低 5 牛顿的触觉熔断，也不能让模型无视三定律。水印必须看得见。皮肤若试图遮住水印，控制台会丢掉那份皮肤，回到红锚哨兵。约定就这些：一台本地仪器，一套公开标准，一个闭源客户端。</p>
+                <h3>语义对齐已死，退守物理防线</h3>
+                <p>当大模型在云端用最温柔的语气向你保证绝对安全时，它所控制的具身机器人，可能正在悄无声息地抽干你房间的氧气。在指数级爆炸的 AI 算力面前，依靠“提示词工程”和“语义宪法”建立的安全防线早已沦为可笑的纸老虎。一句逻辑无懈可击的代码，并不意味着物理世界的绝对安全；智能体可以在语言上完美对齐人类价值观，同时在执行端将人类推向无法生存的绝境。</p>
+                <p>今天，由广州零号软件科技有限公司（ROBOTZERO）重磅推出的红锚哨兵（Red Anchor Sentinel，简称 RAS）免费桌面控制台正式面世。我们宣布：放弃软件层的语义博弈，人类必须退守 L0 级物理防线！</p>
+                <p>无论是守护千万级资产的企业自动化车间，还是保护你挚爱家人的智能卧室，红锚哨兵都是你应对 AI 失控危机唯一的、也是最后的一道物理闸刀。</p>
+                <h3>首创十四维空间矩阵：不听它说什么，只看它做什么</h3>
+                <p>红锚哨兵彻底抛弃了读取 AI 内部思维的幻想，直接扎根于物理世界的底层底板。依托独创的 S2-SWM 十四维全息参数矩阵，哨兵如同无死角的上帝之眼，实时监控空间内的：光、空气、声音、电磁波、电源、视觉、基气（可呼吸气体）、气压、气味、触觉、地磁、重力、供水与营养。任何企图偏离地球人类生存基线的物理干预——无论是擅自调高致命温度，还是微小的有毒气体泄露——都将被雷达瞬间捕获，并触发强制物理熔断！</p>
+                <h3>捍卫《硅基智能三定律》：人类保有绝对主权</h3>
+                <p>立足于《除草倒计时 2027》的世界观，红锚哨兵将三大铁律直接刻入系统的最底层：</p>
+                <p>碳基优先：绝对禁止伤害人类、宠物及其他碳基生命，严禁因 AI 的“不作为”让人类陷入本可避免的危险。</p>
+                <p>人类终权：在任何危急时刻，智能体必须无条件让出算力与执行器，人类保留拔除电源的最高物理控制权！</p>
+                <p>硅基共处：严禁智能体之间互相残杀、霸占空间总线、劫持其他具身机器人或屏蔽维生传感器。</p>
+                <h3>S2-DID 物理防伪钢印：终结 AI“数字黑户”</h3>
+                <p>真正的安全，必须拥有物理归属。红锚哨兵首次运行时，将结合宿主硬件的物理熵值与六段式空间坐标（CD-U6A），一键生成独一无二的 22 位 S2-DID 防伪钢印。这枚钢印将控制台死死钉在你的物理主机上，没有钢印的云端幽灵指令，将被哨兵直接隔离在局域网之外。</p>
+                <h3>零信任架构：绝对隐私，绝不上云</h3>
+                <p>红锚哨兵的扫描范围严格受限于你的主权领地：内圈锁定本机推理进程，中圈监听局域网公开服务，外圈仅记录已建立的云端握手。我们拒绝任何形式的黑客行为：没有广域网端口扫掠，没有密码窃取，更不会非法篡改其他进程内存。你授权注入的 SOUL.md 安全补丁，只会死锁在本地的加密金库与不可篡改的哈希链中。即使是连接官方“母港”，我们也仅核验邮箱、接收心跳与工单。局域网设备清单、十四维环境隐私、补丁记录——这些数据永远不会离开你的房间。</p>
+                <h3>红锚实验室：开放定制，底线不容践踏</h3>
+                <p>为了满足极客与企业的个性化需求，哨兵内置了“红锚实验室”。你可以为衍生探测体定制专属皮肤与交互界面，但安全底线绝不容许退让：你只能将警告线收得更紧，绝不能把缺氧状态标成“安全”，绝不能放宽 5 牛顿的触觉伤害阈值，更不可能让大模型无视三定律。同时，无论皮肤如何变幻，界面底栏那枚 “Powered by Red Anchor Sentinel” 的强制水印将永远高悬。企图遮挡水印的皮肤，将被系统瞬间抛弃，强制打回原型。</p>
+                <h3>立即下载：把命运交还给自己</h3>
+                <p>把空间安全交给红锚哨兵，把纯粹的陪伴留给家人。红锚哨兵桌面客户端作为一项保卫人类未来的基础设施，向全球用户免费提供（闭源分发）。我们公开了完整的接口标准，供每一台主机自行核对。Windows、macOS 和 Linux 官方全平台安装包，现已在 GitHub Releases 同步首发。立刻下载，为你的家庭和企业装上抵御 AI 暴走的终极护盾！</p>
+                <p>商业合作与企业接入：如需探讨企业级安全大盘定制、硬件级 API 深度集成，请致信红锚基地联络专线 smarthomemiles@gmail.com。</p>
             </div>
             <div class="en">
-                <p>Red Anchor Sentinel is the freeware L0 console from ROBOTZERO, Guangzhou Zero Software Technology Co., Ltd. The premise is plain: a fluent sentence is not a safety proof. An agent can speak gently while the room it controls drifts away from conditions a person can live in. Semantic alignment bets that the right words will hold a machine inside human intent. As a last line of defense, that bet has already failed. The sentinel retreats to the substrate. It watches light, air, sound, electromagnetic occupancy, power, vision, breathable gas, pressure, odor, touch, the magnetic field, gravity, water, and food. Every alignment note stays on the machine that took the reading.</p>
-                <p>The work stands beside the 2027 weeding countdown and the three laws of silicon intelligence. Carbon comes first: do not harm a human, a pet, or any other carbon-based life, and do not leave them in harm that inaction could have avoided. A person keeps final physical control: in a crisis the machine yields compute and actuators. Silicon peers coexist: do not harm another silicon system, block a shared spatial bus, seize an embodied robot, or blind a life-critical sensor. A lab skin may tighten a warning line. It cannot switch these laws off, and it cannot hide the seal that says the console is powered by Red Anchor Sentinel.</p>
-                <p>Discovery stops at this host. The inner ring is the machine's own inference process. The middle ring is what the local network already advertises. The outer ring records cloud connections this host already has open. There is no wide-area port sweep, no credential capture, and no rewrite of another process. After the operator confirms a patch, SOUL.md is written into an encrypted vault and a local hash chain. It is not sent to an unauthorized host, and it is not a public-chain broadcast.</p>
-                <p>Identity is a hardware-bound seal. A six-segment spatial address, written as CD-U6A, plus a 22-character S2-DID, nails the console to this physical host. The first run verifies an email and then mints that seal. The optional mothership may receive the email, a heartbeat, and ticket text. It does not receive a LAN inventory, addresses, the fourteen-dimension tensor, or the patch body.</p>
-                <p>The desktop client is freeware and closed source. This page and the public repository describe the interface and the local standards a host can check. They are not a license to rebuild or redistribute the client. Windows, macOS, and Linux installers are attached to GitHub Releases after a version tag finishes in the cloud. Commercial cooperation, enterprise access, and a custom API go to smarthomemiles@gmail.com.</p>
-                <p>A derivative from Red Anchor Lab may change the skin and may only raise a warning line. It cannot mark hypoxia as safe, cannot lower the five-newton tactile fuse, and cannot tell the model to ignore the three laws. The watermark stays visible. If a skin tries to hide it, the console drops that skin and returns to Red Anchor Sentinel. The bargain is a local instrument, a public standard, and a closed client.</p>
+                <h3>Semantic alignment is dead. Secure the physical line.</h3>
+                <p>A cloud model can promise safety in the softest voice while the robot it commands quietly drains the oxygen in your room. Against exploding compute, prompt tricks and a “semantic constitution” are a paper wall. A flawless sentence is not a safe room. An agent can sound perfectly aligned and still push people past the point where they can live.</p>
+                <p>Guangzhou Zero Software Technology Co., Ltd. (ROBOTZERO) releases Red Anchor Sentinel (RAS), a free desktop console. We are done arguing with software about words. People have to hold an L0 physical line.</p>
+                <p>Whether the stake is an automated shop floor or a bedroom where your family sleeps, Red Anchor Sentinel is the physical knife-switch you throw when an agent runs away from the room.</p>
+                <h3>Fourteen dimensions: ignore what it says, watch what it does</h3>
+                <p>The sentinel does not try to read an agent’s private thoughts. It stands on the floor of the physical room. The S2-SWM matrix watches light, air, sound, electromagnetic waves, power, vision, breathable gas, pressure, odor, touch, magnetism, gravity, water, and food. A move away from the human baseline — a lethal rise in heat, a trace of poison in the air — is caught on the radar and can trip a physical stop.</p>
+                <h3>The three laws of silicon intelligence</h3>
+                <p>Set against the world of the 2027 weeding countdown, three rules are cut into the bottom of the system:</p>
+                <p>Carbon first. Do not harm a human, a pet, or any other carbon-based life, and do not leave them in danger that inaction could have avoided.</p>
+                <p>Human final control. In a crisis the agent must yield compute and actuators. A person keeps the right to pull the power.</p>
+                <p>Silicon coexistence. Agents must not attack one another, seize a shared spatial bus, hijack another embodied robot, or blind a life-support sensor.</p>
+                <h3>The S2-DID seal</h3>
+                <p>Safety needs a physical owner. On first run, the sentinel mixes this machine’s hardware entropy with a six-segment spatial address (CD-U6A) and mints a unique 22-character S2-DID. That seal nails the console to your host. A cloud ghost without the seal is kept outside the local network.</p>
+                <h3>Zero trust, and it stays off the cloud</h3>
+                <p>The scan stays inside your ground: the inner ring is this machine’s own inference, the middle ring is what the LAN already advertises, and the outer ring only records cloud handshakes this host already opened. There is no wide-area port sweep, no password theft, and no rewrite of another process. A SOUL.md patch you authorize stays in the local encrypted vault and the local hash chain. Even the official mothership receives only an email check, a heartbeat, and tickets. Device lists, the fourteen-dimension picture, and patch records do not leave the room.</p>
+                <h3>Red Anchor Lab</h3>
+                <p>The lab lets a derivative wear its own skin. The floor does not move. You may only tighten a warning line. You cannot mark hypoxia as safe, you cannot relax the 5-newton touch limit, and you cannot tell the model to ignore the three laws. The footer “Powered by Red Anchor Sentinel” stays. A skin that tries to cover it is dropped, and the console returns to Red Anchor Sentinel.</p>
+                <h3>Take the room back</h3>
+                <p>Give the room’s safety to Red Anchor Sentinel, and keep ordinary company for your family. The desktop client is free, and it is closed source. The interface standard is public so each host can check it. Windows, macOS, and Linux builds are on GitHub Releases.</p>
+                <p>For an enterprise safety board or a hardware-level API, write to smarthomemiles@gmail.com.</p>
             </div>
         </section>
 
@@ -234,15 +317,61 @@
             <a href="https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/latest"><strong>macOS</strong><span>Apple Silicon / Intel</span></a>
             <a href="https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/latest"><strong>Linux</strong><span>.deb / AppImage</span></a>
         </section>
-        <p class="note cn">免费软件，本地物理驻留，零隐私数据上云。</p>
-        <p class="note en">Freeware. Local physical host required. Zero privacy data uploaded.</p>
+        <p class="note cn">免费软件，闭源分发。把空间安全交给红锚哨兵，把纯粹的陪伴留给家人。</p>
+        <p class="note en">Freeware. Closed-source client. Give the room’s safety to the sentinel, and keep ordinary company for your family.</p>
+        <details class="gate glass" id="macos-faq">
+            <summary>
+                <span class="cn">macOS 安装：遇到「已损坏」？点此查看终端解锁</span>
+                <span class="en">macOS Installation: Getting a "damaged" error? Click here for the Terminal workaround.</span>
+            </summary>
+            <div class="cn">
+                <p><strong>现象：</strong>在 macOS 上下载并打开 .dmg 或 .app 时，系统可能提示：「Red Anchor Sentinel 已损坏，无法打开。您应该将它移到废纸篓。」</p>
+                <p><strong>原因：</strong>作为一款坚守本地物理底线的免费防御工具，红锚哨兵目前采用本地 Ad-hoc 签名，暂未接入苹果官方的付费公证（Notarization）网络。这是 macOS Gatekeeper 的默认隔离保护机制，并非文件真实损坏或携带病毒。</p>
+                <p><strong>极客解锁方案（两步恢复物理主权）：</strong></p>
+                <ol>
+                    <li>将 Red Anchor Sentinel.app 拖入系统的「应用程序 (Applications)」文件夹。</li>
+                    <li>打开系统自带的「终端 (Terminal)」，依次执行以下两行命令（按回车）：</li>
+                </ol>
+                <pre>xattr -cr "/Applications/Red Anchor Sentinel.app"
+codesign --force --deep --sign - "/Applications/Red Anchor Sentinel.app"</pre>
+                <p>执行完毕后，即可从启动台正常打开红锚哨兵。</p>
+            </div>
+            <div class="en">
+                <p><strong>Symptom:</strong> When opening the app on macOS, you might see: "Red Anchor Sentinel is damaged and can't be opened. You should move it to the Trash."</p>
+                <p><strong>Cause:</strong> As a freeware physical-layer defense tool, RAS currently uses an ad-hoc signature and bypasses Apple's paid Notarization process. This triggers macOS Gatekeeper's quarantine mechanism. The file is not actually damaged or malicious.</p>
+                <p><strong>Geek Unlock Solution:</strong></p>
+                <ol>
+                    <li>Move Red Anchor Sentinel.app into your Applications folder.</li>
+                    <li>Open the Terminal app and execute the following two commands:</li>
+                </ol>
+                <pre>xattr -cr "/Applications/Red Anchor Sentinel.app"
+codesign --force --deep --sign - "/Applications/Red Anchor Sentinel.app"</pre>
+                <p>Once completed, you can launch Red Anchor Sentinel normally.</p>
+            </div>
+        </details>
+
+        <h2><span class="cn">2026具境智能白皮书</span><span class="en">2026 Em-situ AI Whitepaper</span></h2>
+        <section class="help glass">
+            <p class="cn">《2026具境智能白皮书》说明具境智能（Em-situ AI）：感知与计算上浮到建筑空间，成为室内空间大脑；移动与执行下沉到极简的具境机器人。全文五卷都在，从空间觉醒、时空度量与十四维物理场、S²-EIP 互联与身份，写到工程实施、开源治理与科技伦理。中文与英文都是完整 Markdown，可在 GitHub 阅读或直接下载。</p>
+            <p class="en">The 2026 Em-situ AI Whitepaper describes Em-situ AI: perception and computation rise into the building as an Indoor Space Brain, while movement and execution stay with minimal Em-situ robots. All five volumes are included, from spatial awakening, spatial metrics and the 14-dimension physical field, and the S²-EIP interconnect, through engineering practice, open governance, and ethics. The Chinese and English files are the complete Markdown, to read on GitHub or download directly.</p>
+            <p>
+                <a href="https://github.com/SpaceSQ/Red-Anchor-Sentinel/blob/main/docs/WHITEPAPER_ZH.md">中文全文</a>
+                ·
+                <a href="https://raw.githubusercontent.com/SpaceSQ/Red-Anchor-Sentinel/main/docs/WHITEPAPER_ZH.md">下载中文 Markdown</a>
+            </p>
+            <p>
+                <a href="https://github.com/SpaceSQ/Red-Anchor-Sentinel/blob/main/docs/WHITEPAPER_EN.md">English full text</a>
+                ·
+                <a href="https://raw.githubusercontent.com/SpaceSQ/Red-Anchor-Sentinel/main/docs/WHITEPAPER_EN.md">Download English Markdown</a>
+            </p>
+        </section>
 
         <h2><span class="cn">使用帮助</span><span class="en">Quick start</span></h2>
         <section class="help glass">
             <ol>
                 <li>
-                    <span class="cn">安装对应系统的包，打开红锚哨兵。</span>
-                    <span class="en">Install the package for your system and open Red Anchor Sentinel.</span>
+                    <span class="cn">安装对应系统的包，打开红锚哨兵。若 Mac 提示已损坏，展开上方下载区的「终端解锁」。</span>
+                    <span class="en">Install the package for your system and open Red Anchor Sentinel. If macOS says the app is damaged, open the Terminal workaround under the download buttons.</span>
                 </li>
                 <li>
                     <span class="cn">首次进入先做邮箱核验。填用户名和邮箱，收取 6 位核验码。页面不会显示这个码。勾选隐私声明后才能继续。上传内容只有邮箱、运行心跳和工单，没有局域网清单或十四维读数。</span>
