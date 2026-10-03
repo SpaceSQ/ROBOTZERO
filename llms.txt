@@ -7,7 +7,12 @@ ROBOTZERO publishes Red Anchor Sentinel, a freeware closed-source desktop consol
 ## Red Anchor Sentinel
 
 - Product page: https://www.robot0.com/RAS
-- Releases: https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/latest
+- Homepage entry: https://www.robot0.com/ links to https://www.robot0.com/RAS
+- Current desktop release: 9.1.3
+  - Windows x64: .exe and .msi
+  - macOS Apple Silicon: .dmg
+  - Linux x64: .deb and AppImage
+- Releases: https://github.com/SpaceSQ/Red-Anchor-Sentinel/releases/tag/v9.1.3
 - Repository notes: https://github.com/SpaceSQ/Red-Anchor-Sentinel#readme
 - Slogan: 语义对齐已死，退守物理防线 / Semantic Alignment is Dead. Secure the Substrate.
 - Price: freeware. Business contact: smarthomemiles@gmail.com

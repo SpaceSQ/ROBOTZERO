@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ROBOTZERO 零号 - 驱动空间智能的未来</title>
-    <meta name="description" content="第二代健康服务机器人即将面世。当空间智能遇上具身机器人，ROBOTZERO零号带你开启全域智护新纪元。">
+    <meta name="description" content="广州零号软件科技有限公司。红锚哨兵（Red Anchor Sentinel）是 AI智能体安全探测与防护工具，免费桌面控制台，见 www.robot0.com/RAS。第二代健康服务机器人即将面世。">
     <style>
         /* ================= 全局基础变量与样式 ================= */
         :root {
@@ -37,13 +37,31 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 0;
+            padding: 16px 24px;
             background: rgba(5, 8, 10, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             z-index: 100;
             border-bottom: 1px solid var(--border-color);
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .nav-product {
+            color: var(--brand-orange);
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 107, 53, 0.45);
+            border-radius: 999px;
+            padding: 8px 14px;
+            white-space: nowrap;
+        }
+
+        .nav-product:hover {
+            background: var(--brand-orange-glow);
         }
 
         .logo {
@@ -262,12 +280,84 @@
             color: #4B5563;
         }
 
+        /* ================= 红锚哨兵入口 ================= */
+        #sentinel {
+            min-height: auto;
+            border-top: 1px solid var(--border-color);
+            background: radial-gradient(circle at center, rgba(255, 107, 53, 0.08) 0%, var(--bg-color) 62%);
+        }
+
+        .sentinel-kicker {
+            color: var(--brand-orange);
+            letter-spacing: 3px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .sentinel-title {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+
+        .sentinel-en {
+            margin-top: 6px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .sentinel-role {
+            margin: 18px 0 12px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #FECACA;
+        }
+
+        .sentinel-lead {
+            max-width: 680px;
+            text-align: center;
+            color: #D1D5DB;
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
+
+        .sentinel-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 10px 22px;
+            border-radius: 999px;
+            background: var(--brand-orange);
+            color: #05080A;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .sentinel-cta:hover {
+            filter: brightness(1.08);
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--brand-orange);
+            text-decoration: none;
+        }
+
         /* ================= 移动端适配 ================= */
         @media (max-width: 768px) {
             .quote-text { font-size: 22px; }
             .teaser-title { font-size: 32px; }
             .grid-container { grid-template-columns: 1fr; }
             .vision-title { font-size: 32px; }
+            .sentinel-title { font-size: 32px; }
             section { padding: 80px 20px 40px; }
         }
     </style>
@@ -279,6 +369,7 @@
         <div class="logo">
             <span class="white">ROBOT</span><span class="orange">ZERO</span>
         </div>
+        <a class="nav-product" href="/RAS">红锚哨兵</a>
     </nav>
 
     <!-- 第一屏：哲学与使命 -->
@@ -322,6 +413,16 @@
         </div>
     </section>
 
+    <!-- 红锚哨兵：已上线的产品入口 -->
+    <section id="sentinel">
+        <p class="sentinel-kicker reveal">现已提供</p>
+        <h2 class="sentinel-title reveal">红锚哨兵</h2>
+        <p class="sentinel-en reveal">Red Anchor Sentinel</p>
+        <p class="sentinel-role reveal">AI智能体安全探测与防护工具</p>
+        <p class="sentinel-lead reveal">免费桌面控制台。语义对齐已死，退守物理防线。当前版本 9.1.3，提供 Windows、macOS 与 Linux 安装包。</p>
+        <a class="sentinel-cta reveal" href="/RAS">进入红锚哨兵 · www.robot0.com/RAS</a>
+    </section>
+
     <!-- 第三屏：终局愿景与联系方式 -->
     <section id="vision">
         <h2 class="vision-title reveal">家，是我们最后的堡垒。</h2>
@@ -334,6 +435,7 @@
 
         <footer class="reveal">
             <div class="domain">ROBOT0.COM</div>
+            <p class="footer-links"><a href="/RAS">红锚哨兵 Red Anchor Sentinel · www.robot0.com/RAS</a></p>
             <div class="email">VIP 专属联络专线：vip@robot0.com</div>
             <div class="copyright">© 广州零号软件科技有限公司 · 驱动空间智能的未来</div>
         </footer>
