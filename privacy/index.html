@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="lang-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私声明 · Privacy Policy · 红锚哨兵</title>
+    <meta name="description" content="红锚哨兵 iPhone 与 iPad 应用的隐私声明。摄像头仅用于扫描配对二维码，本地网络仅用于连接你自己的电脑。">
+    <link rel="canonical" href="https://www.robot0.com/privacy">
+    <style>
+        :root {
+            --bg: #05080A;
+            --text: #f3f4f6;
+            --muted: #9ca3af;
+            --red: #ef4444;
+            --orange: #FF6B35;
+            --line: #1f2937;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.65;
+        }
+        a { color: inherit; }
+        .lang-cn .en { display: none; }
+        .lang-en .cn { display: none; }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 24px;
+            background: rgba(5, 8, 10, 0.9);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
+        .brand { color: var(--text); text-decoration: none; font-weight: 900; letter-spacing: 2px; }
+        .brand span { color: var(--orange); }
+        .lang { display: flex; border: 1px solid #374151; border-radius: 999px; overflow: hidden; }
+        .lang button {
+            background: transparent;
+            color: var(--muted);
+            border: 0;
+            min-height: 36px;
+            padding: 0 14px;
+            cursor: pointer;
+        }
+        .lang-en .lang button[data-lang="en"],
+        .lang-cn .lang button[data-lang="cn"] { background: var(--red); color: white; }
+        main { max-width: 820px; margin: 0 auto; padding: 40px 20px 48px; }
+        .stamp {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding: 4px 10px;
+            border: 1px solid var(--red);
+            color: #fecaca;
+            letter-spacing: 0.16em;
+            font-size: 12px;
+        }
+        h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .meta { color: var(--muted); margin-bottom: 22px; }
+        h2 { margin: 26px 0 10px; font-size: 22px; color: #fecaca; }
+        p, li { color: #d1d5db; }
+        p { margin-bottom: 12px; }
+        ul { margin: 0 0 12px 22px; }
+        li { margin: 6px 0; }
+        footer { margin-top: 36px; color: #6b7280; font-size: 14px; }
+        footer a { color: #d1d5db; }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="brand" href="/">ROBOT<span>ZERO</span></a>
+        <div class="lang" aria-label="EN / CN">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="cn">CN</button>
+        </div>
+    </header>
+    <main>
+        <p class="stamp">RAS / PRIVACY</p>
+        <h1>
+            <span class="cn">隐私声明</span>
+            <span class="en">Privacy Policy</span>
+        </h1>
+        <p class="meta cn">生效日期：2026年10月4日。适用于红锚哨兵（Red Anchor Sentinel）的 iPhone 与 iPad 应用。运营者：广州零号软件科技有限公司（ROBOTZERO）。</p>
+        <p class="meta en">Effective 4 October 2026. This policy covers the Red Anchor Sentinel app for iPhone and iPad. Operator: Guangzhou RobotZero Software Technology Co.,ltd (ROBOTZERO).</p>
+
+        <div class="cn">
+            <h2>1. 这份声明说明什么</h2>
+            <p>红锚哨兵是一款 AI 智能体安全探测与防护工具。手机应用用来登录账户，并与你自己电脑上的红锚哨兵主机配对。本声明说明该应用使用摄像头和本地网络的原因，以及账户信息如何处理。</p>
+            <h2>2. 摄像头</h2>
+            <p>摄像头只在你主动扫描电脑屏幕上的配对二维码时打开。画面只用来读取这个二维码。应用不会把画面存进相册，也不会把照片上传到我们的服务器。</p>
+            <h2>3. 本地网络</h2>
+            <p>应用使用本地网络和 Bonjour（服务类型 <code>_ras._tcp</code>），在同一 Wi-Fi 上寻找你自己的、已经打开的红锚哨兵电脑。找到之后，手机可以接收该电脑发出的雷达与告警，也可以把账户核验交给这台电脑发送。</p>
+            <p>查找范围停在这个局域网里的你自己的主机。应用不扫描公网，不收集其他设备上的密码，也不改写其他程序。</p>
+            <h2>4. 账户与邮件</h2>
+            <p>注册和登录需要电子邮箱。核验码由与手机配对的那台电脑经邮件服务器发出，应用页面不显示这个核验码。密码用于在该电脑上建立或打开账户。登录成功后，手机只在本机保存本次会话。</p>
+            <p>为了把信送到你的邮箱，邮件服务器会收到这个邮箱地址和核验信。我们不出售邮箱地址，也不用它投放广告。</p>
+            <h2>5. 留在你这边的数据</h2>
+            <p>局域网设备清单、十四维环境读数和本机安全记录留在你的电脑与本地网络中，不作为本隐私声明下的上传内容。你在手机上退出登录后，手机上保存的本次会话会被删除。</p>
+            <h2>6. 联系与更新</h2>
+            <p>隐私问题请写到 <a href="mailto:smarthomemiles@gmail.com">smarthomemiles@gmail.com</a>。声明若有更新，会改这一页，并更换上方的生效日期。</p>
+        </div>
+        <div class="en">
+            <h2>1. What this policy covers</h2>
+            <p>Red Anchor Sentinel is an AI agent security detection and protection tool. The phone app signs in an account and pairs with Red Anchor Sentinel on a computer you use. This policy explains why the app uses the camera and the local network, and how the account details are handled.</p>
+            <h2>2. Camera</h2>
+            <p>The camera opens only when you choose to scan the pairing QR code shown on your computer. The image is used to read that code. The app does not save the image to your photo library and does not upload it as a photograph.</p>
+            <h2>3. Local network</h2>
+            <p>The app uses the local network and Bonjour (service type <code>_ras._tcp</code>) to find your own computer on the same Wi-Fi while Red Anchor Sentinel is open there. After that, the phone can receive radar readings and alerts from that computer, and can hand an account check to that computer to send.</p>
+            <p>The search stays on that local network and looks for your own host. The app does not scan the public internet, does not collect passwords from other devices, and does not rewrite other programs.</p>
+            <h2>4. Account and mail</h2>
+            <p>Registration and sign-in use an email address. The verification code is sent by the paired computer through its mail server. The app does not display that code. The password opens or creates the account on that computer. After sign-in, the phone keeps the session on the device itself.</p>
+            <p>To deliver the message, the mail server receives that email address and the verification message. We do not sell the address, and we do not use it for advertising.</p>
+            <h2>5. What stays with you</h2>
+            <p>LAN device lists, fourteen-dimension readings, and local safety records stay on your computer and the local network. They are not an upload under this policy. When you log out on the phone, the session stored on the phone is deleted.</p>
+            <h2>6. Contact and updates</h2>
+            <p>Privacy questions: <a href="mailto:smarthomemiles@gmail.com">smarthomemiles@gmail.com</a>. If this policy changes, this page will change, and the effective date above will change with it.</p>
+        </div>
+        <footer>
+            <p><a href="/RAS/"><span class="cn">红锚哨兵产品页</span><span class="en">Red Anchor Sentinel</span></a> · <a href="/RAS/legal.html"><span class="cn">免费软件使用声明</span><span class="en">Freeware notice</span></a></p>
+            <p>© 广州零号软件科技有限公司 (ROBOTZERO)</p>
+            <p class="en">Guangzhou RobotZero Software Technology Co.,ltd</p>
+        </footer>
+    </main>
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var stored = localStorage.getItem("ras-lang");
+            function apply(lang) {
+                root.classList.toggle("lang-en", lang === "en");
+                root.classList.toggle("lang-cn", lang !== "en");
+                root.lang = lang === "en" ? "en" : "zh-CN";
+                localStorage.setItem("ras-lang", lang === "en" ? "en" : "cn");
+            }
+            if (stored === "en" || stored === "cn") apply(stored);
+            document.querySelectorAll(".lang button").forEach(function (button) {
+                button.addEventListener("click", function () { apply(button.getAttribute("data-lang")); });
+            });
+        })();
+    </script>
+</body>
+</html>

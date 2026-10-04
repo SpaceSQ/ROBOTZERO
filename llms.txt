@@ -7,6 +7,7 @@ ROBOTZERO publishes Red Anchor Sentinel, a freeware closed-source desktop consol
 ## Red Anchor Sentinel
 
 - Product page: https://www.robot0.com/RAS
+- Privacy policy: https://www.robot0.com/privacy
 - Homepage entry: https://www.robot0.com/ links to https://www.robot0.com/RAS
 - Current desktop release: 9.1.3
   - Windows x64: .exe and .msi
