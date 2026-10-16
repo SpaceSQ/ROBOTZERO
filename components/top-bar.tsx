@@ -3,7 +3,7 @@
 import { COPY } from "@/lib/copy";
 import { useLang, type Lang } from "@/components/lang";
 
-export function TopBar({ page }: { page?: "research" | "funding" | "about" | "contact" | "privacy" }) {
+export function TopBar({ page }: { page?: "research" | "funding" | "about" | "contact" | "privacy" | "ras" }) {
   const { lang, setLang } = useLang();
   const text = COPY[lang];
 
@@ -14,7 +14,7 @@ export function TopBar({ page }: { page?: "research" | "funding" | "about" | "co
           <img className="brand-mini" src="/brand/robotzero.png" alt="" />
         </a>
       ) : (
-        <span>robotzero.com</span>
+        <span>robot0.com</span>
       )}
       <div className="rule-right">
         {page ? <span className="rule-label">{text[page]}</span> : null}
